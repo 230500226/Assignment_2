@@ -9,16 +9,14 @@
 #include<string.h>
 #include<math.h>
 /************* GLOBAL VARIABLES ************/
-// state global variable if any
-/******** FUNCTIONS (DECLARE/DEFINE) *********/
-
 // Struct to store the Dates
 typedef struct {
         unsigned int day;
         unsigned int month;
         unsigned int year;
     } Date;
-
+// state global variable if any
+/******** FUNCTIONS (DECLARE/DEFINE) *********/
 // Function to compare the two dates
 int compareDates(Date d1, Date d2) {
 
@@ -52,8 +50,8 @@ int compareDates(Date d1, Date d2) {
 /************* MAIN FUNCTION**************/
 int main(){
 
-    Date date1 = {20, 7, 2023}; //More recent
-    Date date2 = {17, 7, 2023}; //Less recent
+    Date date1 = {20, 7, 2023}; // More recent Date
+    Date date2 = {17, 7, 2023}; // Less recent Date
 
     int result = compareDates(date1, date2);
 

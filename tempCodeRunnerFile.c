@@ -9,10 +9,12 @@
 #include<string.h>
 #include<math.h>
 /************* GLOBAL VARIABLES ************/
-typedef union {
-    int integer;
-    float real;
-}   Number;
+
+    typedef union {
+        int integer;
+        float floatingPoint;
+    }   DataValue;
+
 // state global variable if any
 /******** FUNCTIONS (DECLARE/DEFINE) *********/
 //typedef struct
@@ -22,11 +24,17 @@ typedef union {
 /************* MAIN FUNCTION**************/
 int main(){
 
-    Number num;
-    num.integer = 1;
-    // num.real = 1.1;
-    
-    printf("Integer :%d\n", num.integer);
-    printf("Real :%.1f\n", num.real);
+    DataValue data;
+    char input[20];
+
+    printf("Enter a number: ");
+    fgets(input, 20, stdin);
+
+    if (sscanf(input, "%f", &data.floatingPoint) == 1)
+        printf("The input is a floating point number: %f\n", data.floatingPoint);   
+    else if (sscanf(input, "%d", &data.integer) == 1)
+        printf("The input is an integer: %d\n", data.integer);
+    else
+        printf("The input is not a valid number\n");
 
 return 0;}

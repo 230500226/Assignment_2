@@ -30,11 +30,16 @@ int main(){
     printf("Enter a number: ");
     fgets(input, 20, stdin);
 
-    if (sscanf(input, "%d", &data.integer) == 1)
-        printf("The input is an integer: %d\n", data.integer);
-    else if (sscanf(input, "%f", &data.floatingPoint) == 1)
-        printf("The input is a floating point number: %f\n", data.floatingPoint);
-    else
-        printf("The input is not a valid number\n");
+    if (strchr(input, '.') != NULL) {
+        if (sscanf(input, "%f", &data.floatingPoint) == 1)
+            printf("The input is a floating point number: %f\n", data.floatingPoint);
+        else
+            printf("The input is not a valid number\n");
+    } else {
+        if (sscanf(input, "%d", &data.integer) == 1)
+            printf("The input is an integer: %d\n", data.integer);
+        else
+            printf("The input is not a valid number\n");
+    }
 
 return 0;}
