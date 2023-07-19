@@ -46,8 +46,8 @@ int compareDates(Date d1, Date d2) {
 /************* MAIN FUNCTION**************/
 int main(){
 
-    Date date1 = {20, 7, 2023};
-    Date date2 = {17, 7, 2023};
+    Date date1 = {20, 7, 2023}; //More recent
+    Date date2 = {17, 7, 2023}; //Less recent
 
     int result = compareDates(date1, date2);
 
