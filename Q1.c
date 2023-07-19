@@ -12,15 +12,20 @@
 // state global variable if any
 /******** FUNCTIONS (DECLARE/DEFINE) *********/
 
+// Struct to store the Dates
 typedef struct {
         unsigned int day;
         unsigned int month;
         unsigned int year;
     } Date;
 
+// Function to compare the two dates
 int compareDates(Date d1, Date d2) {
+
+    // Compare the year
     if  (d1.year < d2.year)
         return -1;
+    // Compare the month
     else if (d1.month  > d2.month)
         return 1;
     else {
@@ -29,6 +34,7 @@ int compareDates(Date d1, Date d2) {
         else if (d1.month > d2.month)
                 return 1;
         else {
+            // Compare the day
             if (d1.day < d2.day)
                 return -1;
             else if (d1.day > d2.day)

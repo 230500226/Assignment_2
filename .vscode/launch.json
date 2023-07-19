@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/snowy/Documents/Github/Assignment_2",
-      "program": "c:/Users/snowy/Documents/Github/Assignment_2/build/Debug/outDebug",
+      "cwd": "c:/Users/snowy/Documents/GitHub/Assignment_2",
+      "program": "c:/Users/snowy/Documents/GitHub/Assignment_2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
