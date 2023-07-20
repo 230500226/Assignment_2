@@ -3,25 +3,29 @@
 // Student No.: 230500226
 // Course Title: Software Design 1 (SDN150S)
 // Date: 17/07/2023
+
 /************* HEADER FILES ***************/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
+
 /************* GLOBAL VARIABLES ************/
+// Struct to store the Student's data
+typedef struct{
+    char name[50];
+    int rollNumber;
+    float marks;
+} Student;
 // state global variable if any
+
 /******** FUNCTIONS (DECLARE/DEFINE) *********/
-    // Struct to store the Student's data
-    typedef struct{
-        char name[50];
-        int rollNumber;
-        float marks;
-    } Student;
 
 //typedef struct
 //{ struct with bit-field (choose width length)
 //type [member_name] : width
 //.tag name;
+
 /************* MAIN FUNCTION**************/
 int main(){
 
@@ -56,4 +60,5 @@ int main(){
         printf("Marks: %.1f\n\n", students[i].marks);
     }
 
-return 0;}
+    return 0;
+}

@@ -2,7 +2,7 @@
 // Name: Shahied Rustin
 // Student No.: 230500226
 // Course Title: Software Design 1 (SDN150S)
-// Date: 17/07/2023
+// Date: 20/07/2023
 
 /************* HEADER FILES ***************/
 #include<stdio.h>
@@ -11,15 +11,18 @@
 #include<math.h>
 
 /************* GLOBAL VARIABLES ************/
-// Union to store either an integer or a floating-point number
-typedef union {
-    int integer;
-    float real;
-} Number;
+// Define a struct to store information about a person
+typedef struct {
+    char name[100];
+    int age;
+    float height;
+} Person;
 
 // state global variable if any
 
 /******** FUNCTIONS (DECLARE/DEFINE) *********/
+// Function prototypes, if any, would go here.
+
 //typedef struct
 //{ struct with bit-field (choose width length)
 //type [member_name] : width
@@ -28,18 +31,11 @@ typedef union {
 /************* MAIN FUNCTION**************/
 int main(){
 
-    // Declare a variable num of type Number (union)
-    Number num;
+    // Create a Person struct and initialize its memebers 
+    Person person1 = {"John", 21, 177.8};
 
-    // Store the value 1 in the integer member of the union
-    num.integer = 1;
-    // num.real = 1.1;
-
-    // Output the value stored in the integer member of the union
-    printf("Integer :%d\n", num.integer);
-
-    // Output the value stored in the real member of the union (if uncommented above)
-    printf("Real :%.1f\n", num.real);
+    // Print the information about the person
+    printf("Person %d: name: %s, age: %d years, height: %.1fcm\n", 1, person1.name, person1.age, person1.height);
 
     return 0;
 }

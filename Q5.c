@@ -9,8 +9,9 @@
 #include<string.h>
 #include<math.h>
 /************* GLOBAL VARIABLES ************/
-const int numBooks = 10;
+const int numBooks = 10; // Number of books in the array
 
+// Define a struct to represent a book
 typedef struct {
     char title[100];
     char author[100];
@@ -18,9 +19,9 @@ typedef struct {
 } Book;
 // state global variable if any
 /******** FUNCTIONS (DECLARE/DEFINE) *********/
-void sortSizeOfPages(Book books[], int numBooks) {
-    // Sort the books array in ascending order of pages
-    for (int i = 0; i < numBooks - 1; i++) {
+// Function to sort the books array in ascending order based on the number of pages
+void sortSizeOfPages(Book books[], int numBooks) { // Using bubble sort
+    for (int i = 0; i < numBooks - 1; i++) { 
         for (int j = i + 1; j < numBooks; j++) {
             if (books[i].pages > books[j].pages) {
                 Book temp = books[i];
@@ -37,7 +38,7 @@ void sortSizeOfPages(Book books[], int numBooks) {
 /************* MAIN FUNCTION**************/
 int main(){
 
-    Book books[numBooks];
+    Book books[numBooks]; // Declare an array of Book type to store the books
 
     // Populate the books array
     strcpy(books[0].title, "Harry Potter and the Sorcerer's Stone");
@@ -80,8 +81,12 @@ int main(){
     strcpy(books[9].author, "J.K. Rowling, Jack Thorne & John Tiffany");
     books[9].pages = 349;
 
+    // Call the sortSizeOfPages function to sort the books array in ascending order based on pages
+    sortSizeOfPages(books, numBooks);
+
+    // Display the sorted books with their title, author, and number of pages
     for (int i = 0; i < numBooks; i++) {
-        printf("%s by %s: %d pages\n", books[i].title, books[i].author, books[i].pages);
+        printf("%d. %s by %s: %d pages\n", i+1, books[i].title, books[i].author, books[i].pages);
     }
 
 return 0;}
