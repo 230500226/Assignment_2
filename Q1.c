@@ -55,7 +55,7 @@ int compareDates(Date d1, Date d2) {
 /************* MAIN FUNCTION**************/
 int main(){
 
-    // Create two Date structs and initialize them with specific dates
+    // Create two Date structs and initialize
     Date date1 = {20, 7, 2023}; // More recent Date
     Date date2 = {17, 7, 2023}; // Less recent Date
 
@@ -64,9 +64,9 @@ int main(){
 
     // Check the result and print the appropriate message based on the comparison
     if (result == -1)
-        printf("Date 1 is earlier than Date 2\n");
+        printf("Date 2 is more recent than Date 1\n");
     else if (result == 1)
-        printf("Date 2 is earlier than Date 1\n");
+        printf("Date 1 is more recent than Date 2\n");
     else
         printf("Date 1 is the same as Date 2\n");
 

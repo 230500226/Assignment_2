@@ -37,18 +37,15 @@ int main(){
     // Declare a Data union variable named "data1"
     Data data1;
 
-    // Initialize the integer value of "data1"
-    data1.value = 32;
-
-    // Initialize the binary struct memebers of "data1"
+    // Initialize the (bitfields) binary struct memebers of "data1"
     data1.binary.bit1 = 1;
     data1.binary.bit2 = 2;
     data1.binary.bit3 = 3;
 
     // Printing the union members
-    printf("main value is %d\n", data1.value); // Output: main value is 32
-    printf("bit 1 value is %d\n", data1.binary.bit1); // Output: bit 1 value is 1
-    printf("bit 2 value is %d\n", data1.binary.bit2); // Output: bit 2 value is 2
+    printf("main value is %d\n", data1.value); 
+    printf("bit 1 value is %d\n", data1.binary.bit1); 
+    printf("bit 2 value is %d\n", data1.binary.bit2); // All other values are overwritten
     printf("bit 2 value is %d\n", data1.binary.bit3); // Output: bit 2 value is 3
 
     return 0;

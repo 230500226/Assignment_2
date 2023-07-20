@@ -20,7 +20,7 @@ typedef struct {
 // state global variable if any
 /******** FUNCTIONS (DECLARE/DEFINE) *********/
 // Function to sort the books array in ascending order based on the number of pages
-void sortSizeOfPages(Book books[], int numBooks) { // Using bubble sort
+void sortBySizeOfPages(Book books[], int numBooks) { // Using bubble sort
     for (int i = 0; i < numBooks - 1; i++) { 
         for (int j = i + 1; j < numBooks; j++) {
             if (books[i].pages > books[j].pages) {
@@ -81,8 +81,8 @@ int main(){
     strcpy(books[9].author, "J.K. Rowling, Jack Thorne & John Tiffany");
     books[9].pages = 349;
 
-    // Call the sortSizeOfPages function to sort the books array in ascending order based on pages
-    sortSizeOfPages(books, numBooks);
+    // Call the sortBySizeOfPages function to sort the books array in ascending order based on pages
+    sortBySizeOfPages(books, numBooks);
 
     // Display the sorted books with their title, author, and number of pages
     for (int i = 0; i < numBooks; i++) {

@@ -50,7 +50,7 @@ int main(){
         int temp_radius; // Temporary variable to store the user input for radius
         printf("Enter the radius of the circle:\n");
         scanf("%d", &temp_radius);
-        shape.circle.radius = temp_radius;
+        shape.circle.radius = temp_radius; // Cannot assign value to the bitfield directly
         area = PI * pow(shape.circle.radius, 2);
         printf("The area of the circle is %.2f\n", area);
 

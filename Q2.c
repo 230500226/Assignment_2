@@ -35,10 +35,8 @@ int main(){
     num.integer = 1;
     // num.real = 1.1;
 
-    // Output the value stored in the integer member of the union
+    // Print both members of the union
     printf("Integer :%d\n", num.integer);
-
-    // Output the value stored in the real member of the union (if uncommented above)
     printf("Real :%.1f\n", num.real);
 
     return 0;

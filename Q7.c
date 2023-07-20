@@ -30,7 +30,7 @@ typedef union {
 /************* MAIN FUNCTION**************/
 int main(){
 
-    // Declare a Colour union variable "color1"
+    // Declare a Color union variable "color1"
     Color color1;
 
     // Initialize the color components of "color1"
